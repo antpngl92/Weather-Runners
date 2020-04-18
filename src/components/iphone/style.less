@@ -1,0 +1,414 @@
+@import '~style/helpers';
+
+.container {
+	//animation: introFade 1s;
+	display: flex;
+	flex-direction: column;
+	background-image: linear-gradient(#3494E6, #3f4c6b);
+	background-color: #dbdbd7;
+	color: #fff;
+	width: 414px;
+	height: 850px;//original -> 736px;
+	text-align: center;
+  	padding-top: 0em;
+  	margin: 0 auto; //new styling so is fixed to top of screen
+  	//padding-top: 1em;
+  	//below was orginal
+	//margin: 5% auto; // changes the distance between the top of the "iphoen screen" and the top of the browser screen
+	border: 2px solid black;
+	border-radius: 10px;
+  	position: relative;
+  	background-image: url("../Render/Top-Half-BG.png"),  url("../Render/Footer-Basewithoutcircles.png");
+	background-position: top, bottom;
+	background-repeat: no-repeat;
+  	background-size: 412px;
+
+
+}
+
+.header {
+	background-color: rgba(155,155,155,0.2);
+	border-radius: 10px;
+	//margin: 10%;	//did not exist previously
+	margin-left: 0.9em;
+	margin-right: 0.9em;
+	text-align: center;
+	font-family: Trebuchet MS;
+	font-size: 2.5em;
+	color: white;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0px 5px rgba(155,155,155,0.35);
+
+
+}
+
+.weatherRunnersImg
+{
+  	//display: inline-block;
+  	position: absolute;
+	background-color: transparent;
+	border-radius: 10px;
+  	height: 37px;
+  	right: 100px;
+  	top: 30px;
+	//box-shadow: 0px 5px rgba(155,155,155,0.35);
+	transition: all 0.3s ease-in-out;
+}
+
+.dummyUser{
+  position: absolute;
+  text-align: left;
+  left: 97px;
+  top: 60px;
+  font-family: Trebuchet MS;
+}
+
+//.topHalf{
+//
+//	position: absolute;
+//  	right: 0px;
+//  	padding-top: -200px;
+//  	//margin: 0 auto;
+//  	width: 410px;
+//  	z-index: -1;
+//}
+
+.weatherRunnersImg:hover{
+	background-color: rgba(255,255,255,0.15);
+}
+
+.noBorder{border-radius: 0px; margin: 0em;}
+
+.input
+{
+  	//padding-top: -20px;
+	text-align: center;
+	//margin: 1em;
+	border:0;
+	background-color: rgba(255,255,255,0.15);
+	box-shadow: 0px 3px rgba(255,255,255,0.3);
+	color: white;
+	font-family: Trebuchet MS;
+	font-size: 1em;
+	border-radius: 3px;
+	transition: all 0.3s ease-in-out;
+  	z-index: 1;
+}
+
+
+.inputNavBar{
+  //z-index: 1;
+  position: relative;
+  border-color: transparent;
+  top: -78px;
+  height: 27px;
+  left: 27px;
+  width: 300px;
+}
+
+.inputGo{
+	position: relative;
+	top: -78px;
+	height: 27px;
+  	left: 25px;
+  	border-color: transparent;
+}
+
+.searchBar{
+  	padding-top: 10px;
+	display: inline-block;
+  	width: 410px;
+}
+
+.menuInput
+{
+	.input;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+  	z-index: 1;
+}
+
+.menuInput::placeholder{
+	color: white;
+}
+
+.input:focus, .button:focus{
+	outline-width: 0;
+}
+
+::placeholder
+{
+	color: black;
+	font-family: Trebuchet MS;
+}
+
+.text
+{
+	color: white;
+	font-family: Trebuchet MS;
+}
+.location
+{
+	//.text;
+	//font-size: 10px;//2em;
+	//margin: 0;
+
+  	font-size: 15px;
+  	position: relative;
+  	top: 100px;
+
+  	//left: px;
+}
+
+.button
+{
+  text-align: center;
+	margin: 1em;
+	max-width: 200px;
+	border:0;
+	box-shadow: 0px 3px rgba(255,255,255,0.3);
+	background-color: rgba(255,255,255,0.15);
+	color: white;
+	font-family: Trebuchet MS;
+	font-size: 1em;
+	border-radius: 3px;
+  cursor: pointer;
+	transition: all 0.1s ease-in-out;
+}
+
+.button:hover
+{
+	background-color: rgba(255,255,255,0.30);
+}
+
+.closeButton
+{
+	width:15px;
+	height:15px;
+	//display: block;
+	margin: 10px;
+	background: transparent;
+	border: 0;
+	cursor:pointer;
+
+  	position: relative;
+}
+
+.menuButtonStyle
+{
+	.weatherRunnersImg;
+  border: none;
+	float: right;
+  margin-right: 5%;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+	outline: none;
+	cursor: pointer;
+
+  position: absolute;
+  top: 70px;
+  right: 10px;
+
+}
+
+.menuAnimation
+{
+	animation: introFade 1s;
+	margin-top: 20%;
+	color: white;
+}
+
+form
+{
+	margin: 5% 5% 0 0;
+}
+
+.menuButtonStyle:hover
+{
+	background-color: rgba(255,255,255,0.15);
+}
+
+.menuIconImage
+{
+	right: 500px;
+	width: 50px;
+	height: 50px;
+}
+
+.buttonWeather
+{
+  	position: relative;
+  	top: -40px;
+	.button;
+	display: inline-block;
+	margin: 0 auto;
+	margin-top: 5%;
+	font-size: 1.5em;
+}
+
+.buttonWeather:hover
+{
+	background-color: rgba(255,255,255,0.3);
+}
+
+.buttonSettings
+{
+	.button;
+}
+
+.weather
+{
+	// height: 70%;//original val -> 27%;
+
+	border-top: 1003px;
+	background-color: transparent;
+	border-radius: 10px;
+	margin: 0.9em 0.9em;
+	transition: all 0.3s ease-in-out;
+	.text;
+	font-size: 1.5em;
+	text-align: center;
+	padding-top:80px;
+}
+
+
+
+.navbar
+{
+  list-style-type: none;
+	text-align: center;
+  margin: 0;
+  padding: 0;
+	//background-image: url("../../../Renders/Render/Menu-Button.png");
+}
+
+@keyframes introFade
+{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.details {
+	flex: 4;
+}
+.city {
+	flex: 1;
+	font-size: 1.7em;
+	font-weight: 400;
+	font-family: Trebuchet MS;
+	font-size: 2em;
+}
+.conditions {
+	flex: 1;
+	font-size: 1em;
+}
+.temperature {
+	flex: 2;
+	margin-top: 0;
+	font-size: 4.8em;
+	font-weight: 300;
+	letter-spacing: -5px;
+	font-family: Trebuchet MS;
+	font-size: 3em;
+}
+
+.refreshIconStyling{
+  	display: inline-block;
+  	margin-bottom: 8%;
+  	margin-left: 5%;
+	font-size: 1.5em;
+	width: 24px;
+  	height: 24px;
+}
+
+
+
+.profileIconStyling{
+  position: absolute;
+
+  //top: 100px;
+  left: 40px;
+
+  width: 50px;
+  height: 50px;
+}
+
+.weatherIcon{
+	width: 25%;
+	height: 25%;
+}
+
+a
+{
+	text-decoration: none;
+}
+.footerButtons{
+	position: absolute;
+	top: 290px;
+	left: 160px;
+}
+.buttonList1{
+	position: relative;
+	left: -140px;
+	top: 440px;
+}
+.buttonList2{
+	position: relative;
+	left: 15px;
+	top: 330px;
+}
+
+.buttonList3{
+	position: relative;
+	left: 170px;
+	top: 300px;
+}
+
+#forButtonList1{
+	position: absolute;
+	top: 70px;
+	left: 0px;
+}
+#forButtonList2{
+		position: absolute;
+		top: 70px;
+		left: 10px;
+
+}
+#forButtonList3{
+		position: absolute;
+		top: 70px;
+		left: 0px;
+
+}
+.iconButton1L{
+	width: 60px;
+	height: 60px;
+}
+.iconButton2C{
+	width: 75px;
+	height: 75px;
+}
+
+.iconButton3R{
+	width: 60px;
+	height: 60px;
+}
+.forecast{
+	margin-top: 10%;
+	margin-left: 5%;
+	font-size: 1.2em;
+	text-align: left;
+	color: grey;
+	padding-top: 50px;
+}
+
+.forecast table{
+	width:100%
+}
